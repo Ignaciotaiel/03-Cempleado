@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+class CEmpleado{
+	private:
+		int ingreso;
+		string nombre;
+		float salario;
+		string direccion;
+	
+	public:
+		CEmpleado(string n, int i,float s, string d);
+		string getNombre();
+		int getIngreso();
+		float getSalario();
+		string getDireccion();
+};
+
+CEmpleado::CEmpleado(string n, int i, float s, string d){
+	nombre = n;
+	ingreso = i;
+	salario = s;
+	direccion = d;
+}
+
+string CEmpleado::getNombre(){
+	return nombre;
+}
+
+int CEmpleado::getIngreso(){
+	return ingreso;
+}
+
+float CEmpleado::getSalario(){
+	return salario;
+}
+
+string CEmpleado::getDireccion(){
+	return direccion;
+}
+
+int main(){
+	string nombre;
+	int ingreso;
+	float salario;
+	string direccion;
+	
+	cout << "Ingrese el nombre: ";
+	cin >> nombre;
+	cout << "Ingrese el año de ingreso: ";
+	cin >> ingreso;
+	cout << "Ingrese el salario: ";
+	cin >> salario;
+	cout << "Ingrese la dirección: ";
+	cin >> direccion;
+	
+	CEmpleado empleado(nombre, ingreso, salario, direccion);
+	
+	cout << "Nombre: " << empleado.getNombre() << endl;
+	cout << "Año de ingreso: " << empleado.getIngreso() << endl;
+	cout << "Salario: " << empleado.getSalario() << endl;
+	cout << "Dirección: " << empleado.getDireccion() << endl;
+	
+	return 0;
+
+}
